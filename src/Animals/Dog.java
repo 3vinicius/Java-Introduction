@@ -1,18 +1,87 @@
 package Animals;
 
-public class Dog {
+public class Dog extends Animals{
+    //
 
-    public String name;
-    public String cor;
-    public int altura;
-    public double peso;
-    public int tamanhoDoRabo;
 
-    public String stateSpirit ;
+    //Construsctor
+
+    //Construtor padrão
+
+
+    public Dog(String name, String cor, int altura, double peso, int tamanhoDoRabo) {
+        super(name, cor, altura, peso, tamanhoDoRabo);
+    }
+
+    public static int getCount() {
+        return count;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Dog{" +
+                "name='" + name + '\'' +
+                ", cor='" + cor + '\'' +
+                ", altura=" + altura +
+                ", peso=" + peso +
+                ", tamanhoDoRabo=" + tamanhoDoRabo +
+                ", stateSpirit='" + stateSpirit + '\'' +
+                '}';
+    }
+
+    /// Metod
+    public String getName(){
+        return this.name;
+    }
+
+    public void setName(String name){
+        this.name = name;
+    }
+
+    public String getCor() {
+        return cor;
+    }
+    public void SetCor(String cor) {
+        this.cor = cor;
+    }
+
+    public int getAltura() {
+        return altura;
+    }
+
+    public void setAltura(int altura) {
+        this.altura = altura;
+    }
+
+    public double getPeso() {
+        return peso;
+    }
+
+    public void setPeso(double peso) {
+        this.peso = peso;
+    }
+
+    public int getTamanhoDoRabo() {
+        return tamanhoDoRabo;
+    }
+
+    public void setTamanhoDoRabo(int tamanhoDoRabo) {
+        this.tamanhoDoRabo = tamanhoDoRabo;
+    }
+
+    public String getStateSpirit() {
+        return stateSpirit;
+    }
+
+    public void setCor(String cor) {
+        this.cor = cor;
+    }
 
     public void comer(){}
 
-    public void latir(){
+    @Override
+    public void soar(){
         System.out.println("au Au");
     }
 
@@ -43,4 +112,6 @@ public class Dog {
             default: return this.stateSpirit = "neutro";
         }
     }
+
+
 }
